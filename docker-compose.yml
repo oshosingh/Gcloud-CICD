@@ -5,9 +5,12 @@ services:
     ports:
       - 27017:27017
     container_name: mymongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
   backend:
-    # image: backend
-    build: .
+    image: cicdtest_backend
+    # build: .
     ports:
       - 8080:8080
     container_name: backend
