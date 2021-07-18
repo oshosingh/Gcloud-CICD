@@ -28,5 +28,10 @@ public class Rest {
 		mongoTemplate.insert(map, "TestCollection");
 		return ResponseEntity.ok().body("Inserted");
 	}
+	
+	@GetMapping("/get/test")
+	public ResponseEntity<?> getMsg(){
+		return ResponseEntity.ok().body("hello world");
+	}
 
 }
