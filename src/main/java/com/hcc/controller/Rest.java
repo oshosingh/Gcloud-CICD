@@ -32,6 +32,7 @@ public class Rest {
 	@GetMapping("/get/test")
 	public ResponseEntity<?> getMsg(){
 		return ResponseEntity.ok().body("hello world Test");
+		
 	}
 
 }
